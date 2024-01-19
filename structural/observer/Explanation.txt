@@ -1,0 +1,6 @@
+[-] One user might be interested in multiple products
+[-] whenever, the product is in stock, then notify the user in the interested product.
+[-] since, here product is being observed, it becomes observable/subject.
+[-] create an interface with register,unregister,notifyUsers,setStock methods
+[-] create implementations of the interface
+[-] User is monitoring the products , he becomes observable
