@@ -1,0 +1,7 @@
+[-] create an application like zerodha which has multiple stock exchanges (BSE & NSE)
+[-] Users can subscribe to one SE or multiple SE's
+[-] Users registered on the SE's should get notified about the updates of each stock
+[-] Let's say user has registered for both SE's
+[-] BSE publishes stock price of amazon as 100, and next moment it publishes as 200
+[-] NSE now sends notification of amazon's price is 100 (Basically versioning)
+[-] Since, now NSE is sending the stale data , user should not consume it
