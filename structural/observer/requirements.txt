@@ -1,0 +1,3 @@
+[-] Notify Users when the product is available
+[-] Notify Users when the product is unavailable
+[-] Send Email and SMS to the registered users
