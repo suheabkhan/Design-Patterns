@@ -12,6 +12,8 @@ public class Phone implements Subject{
 
     String productCode;
 
+    boolean isProductAvailable=false;
+
     public Phone(String productCode){
         observers = new ArrayList<>();
         this.productCode = productCode;
@@ -34,29 +36,28 @@ public class Phone implements Subject{
        }
     }
 
-    public void setStock(int stockSize){
-      if(stockSize==0){
-      this.stockSize=0;
+    public void setAvailability(boolean status){
+      if(this.isProductAvailable!=status){
+         this.isProductAvailable=status;
+         String message = "";
+   if(!status){
+      message="product is out of stock";
+   }
+   else{
+      message = "product is available";
+   }
+   notifyUsers(message);
       }
-      else{
-         this.stockSize = this.stockSize+stockSize;
-      }
-      String message = "";
-      if(this.stockSize==0){
-         message="product is out of stock";
-      }
-      else{
-         message = "product is available";
-      }
-      notifyUsers(message);
-    }
+ }
 
-    public int getStock(){
-      return this.stockSize;
-    }
     
     public String getProductCode(){
       return this.productCode;
     }
+
+    public boolean getAvailability(){
+      return this.isProductAvailable;
+    }
+
 }
 

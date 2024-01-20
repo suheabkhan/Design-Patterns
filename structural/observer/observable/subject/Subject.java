@@ -12,7 +12,7 @@ public interface Subject {
     
     String getProductCode();
 
-    void setStock(int stock);
+    void setAvailability(boolean status);
 
-    int getStock();
+    boolean getAvailability();
 }

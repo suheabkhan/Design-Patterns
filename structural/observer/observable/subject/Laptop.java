@@ -8,7 +8,10 @@ public class Laptop implements Subject{
 
     List<Observer> observers;
     String productCode;
-    int stockSize = 0;
+    boolean isProductAvailable=false;
+
+    int stockSize=0;
+
 
     public Laptop(String productCode){
         observers = new ArrayList<>();
@@ -32,25 +35,22 @@ public class Laptop implements Subject{
        }
     }
 
-    public void setStock(int stockSize){
-      if(stockSize==0){
-         this.stockSize=0;
+    public void setAvailability(boolean status){
+         if(this.isProductAvailable!=status){
+            this.isProductAvailable=status;
+            String message = "";
+      if(status==false){
+         message="product is out of stock";
+      }
+      else{
+         message = "product is available";
+      }
+      notifyUsers(message);
          }
-         else{
-            this.stockSize = this.stockSize+stockSize;
-         }
-         String message = "";
-         if(this.stockSize==0){
-            message="product is out of stock";
-         }
-         else{
-            message = "product is available";
-         }
-         notifyUsers(message);
     }
 
-    public int getStock(){
-      return this.stockSize;
+    public boolean getAvailability(){
+      return this.isProductAvailable;
     }
 
     public String getProductCode(){

@@ -4,3 +4,5 @@
 [-] create an interface with register,unregister,notifyUsers,setStock methods
 [-] create implementations of the interface
 [-] User is monitoring the products , he becomes observable
+[-] Improvement : User should be notified only when the product is available and is unavailable
+[-] By default, product will be unavailable

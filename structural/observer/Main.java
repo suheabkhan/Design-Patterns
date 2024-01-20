@@ -31,14 +31,15 @@ public class Main {
         phoneObject.register(user3);
 
         System.out.println("--------------------------");
-        laptopObject.setStock(5);
+        laptopObject.setAvailability(true);
         System.out.println("--------------------------");
-        phoneObject.setStock(10);
+        phoneObject.setAvailability(true);
         System.out.println("--------------------------");
-        laptopObject.setStock(0);
+        laptopObject.setAvailability(true);
         System.out.println("--------------------------");
-        phoneObject.setStock(0);
+        phoneObject.setAvailability(false);
         System.out.println("--------------------------");
+        laptopObject.setAvailability(false);
 
     }
 }

@@ -1,3 +1,6 @@
 [-] Notify Users when the product is available
 [-] Notify Users when the product is unavailable
 [-] Send Email and SMS to the registered users
+[-] Should get an update whenever there is change in stock status, whether its available or not
+[-] Should not get notified, whenever there is an update in the quantity of stock, only when quantity is zero then notification should go
+[-] And when the stock is back, then request should go
