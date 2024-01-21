@@ -1,5 +1,6 @@
 package structural.command.cmd;
 
+import structural.command.receiver.PerfectMatchDeleter;
 import structural.command.receiver.TagInserter;
 
 public class InsertTagCommand implements Command{
@@ -7,13 +8,22 @@ public class InsertTagCommand implements Command{
     private final String name;
     private final TagInserter tagInserter;
 
-    public InsertTagCommand(String name, TagInserter tagInserter) {
+    //undo of insertion is deletion of tag
+    private final PerfectMatchDeleter perfectMatchDeleter;
+
+    public InsertTagCommand(String name, TagInserter tagInserter, PerfectMatchDeleter perfectMatchDeleter) {
         this.name = name;
         this.tagInserter = tagInserter;
+        this.perfectMatchDeleter = perfectMatchDeleter;
     }
 
     @Override
     public void execute() {
        this.tagInserter.insert(name);
+    }
+
+    @Override
+    public void undo(){
+       this.perfectMatchDeleter.delete(name);
     }
 }

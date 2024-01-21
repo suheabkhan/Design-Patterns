@@ -20,4 +20,9 @@ public class UpdateTagCommand implements Command{
     public void execute() {
           this.updateTagInserter.update(oldTag,newTag);
     }
+
+    @Override
+    public void undo() {
+      this.updateTagInserter.update(newTag,oldTag);
+    }
 }

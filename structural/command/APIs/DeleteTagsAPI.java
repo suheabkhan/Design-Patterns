@@ -11,6 +11,12 @@ import java.util.regex.Pattern;
 
 public class DeleteTagsAPI {
 
+    private final TagManager tagManager;
+
+    public DeleteTagsAPI(TagManager tagManager) {
+        this.tagManager = tagManager;
+    }
+
     public void deleteTags(String tag, MatchType matchType){
         Command command = null;
         if(matchType.equals(MatchType.PERFECT)){
@@ -22,6 +28,7 @@ public class DeleteTagsAPI {
         else{
             throw new IllegalArgumentException("Invalid match type");
         }
-        new TagManager(command).changeTags();
+        this.tagManager.changeTags(command);
     }
+
 }

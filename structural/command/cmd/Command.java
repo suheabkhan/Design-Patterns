@@ -39,4 +39,6 @@ public interface Command {
     // The execute method inside each command, should be very minimal, and should not perform bulky operation.
     // Create a receiver class, which performs all the underlying logic and this execute method just calls that
     void execute();
+
+    void undo();
 }
