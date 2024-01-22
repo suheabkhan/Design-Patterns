@@ -1,0 +1,19 @@
+
+Decorator pattern allows a user to add new functionality to an existing object without altering its structure.
+
+  Create a different class for each topping
+
+  Create a different class for each base
+
+  Let's say a wheatBase class, it will take input as a pizza, returns wheatBase pizza
+  If you want onion toppings, it will take wheatBase pizza, which is a pizza as an instance variable, and add the toppings return pizza
+  Similarly, we can add whatever combinations we want
+
+
+  // Here topping is the decorator class
+  // It will have an aggregation to the base class/interface Pizza
+  // Now the decorator class will also be an abstract class, as it will have different functionalities to be added to base class
+
+
+// Basically use the decorator pattern, whenever needed to add the combinations of different functionalities.
+

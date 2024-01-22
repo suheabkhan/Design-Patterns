@@ -1,0 +1,20 @@
+
+
+1. Dominos pizza
+
+- creates different varities of pizza and calculates cost depending on the ingredients used
+-Example, wheat core, paneer and corn toppings will have a different cost as its a different variety
+
+Decorator pattern is used, when the base object remains same even if new features are added on top of the base object.
+Example:  wheat pizza base
+          add jalapeno toppings to the above pizza. It's still a pizza with different toping
+          add mushroom toppings to the above pizza. Now, again its a pizza
+
+- There can be several varities of pizza with thin crust, wheat base, thick crust and other toppings combinations (paneer, mushroom,
+chicken, tandoori, corn, jalapeno, cheese)
+- Also, can be combinations of paneer+any one of them
+- If we are interested in getting different combinations, then we need different classes with each combinations. If we go on doing that
+then the the number of classes may go very high.(class explosion)
+
+- Also the above design is not good, as if we want to add new toppings, then base pizza class gets changed. Therefore, it is like
+open for modification. Violation of the open-closed principle
