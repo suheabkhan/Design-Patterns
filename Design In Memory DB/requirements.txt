@@ -1,0 +1,13 @@
+[-] Design an in memory sql DB -> means just store the data in the ram
+[-] Only one DB
+[-] DB can multiple tables
+[-] create and delete tables
+[-] table can have multiple rows and columns
+[-] currently we support only strings as val
+[-] allow to add new row in tables
+[-] delete rows in tables
+[-] create and delete columns in tables
+[-] Should be able to add constraints [PK,FK]
+[-] should support the query [filtering query with multiple filters, as of now,
+filtering by comparing a column value to a constant]
+[-]Ignore joins and aggregations as of now

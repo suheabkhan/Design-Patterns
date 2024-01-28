@@ -1,0 +1,6 @@
+
+public enum ConstraintType {
+PRIMARYKEY,
+PARENTFOREIGNKEY,
+CHILDFOREIGNKEY
+}
